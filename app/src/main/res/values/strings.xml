@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MovieShowMVVM</string>
+    <string name="imageview">Imageview</string>
 </resources>

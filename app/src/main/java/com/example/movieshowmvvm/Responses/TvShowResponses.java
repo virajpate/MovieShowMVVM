@@ -1,6 +1,6 @@
 package com.example.movieshowmvvm.Responses;
 
-import com.example.movieshowmvvm.Model.TvShowModel;
+import com.example.movieshowmvvm.model.TvShowModel;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
