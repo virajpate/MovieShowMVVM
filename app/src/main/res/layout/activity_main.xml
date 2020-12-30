@@ -8,6 +8,11 @@
         <variable
             name="isLoading"
             type="Boolean" />
+
+        <variable
+            name="isLoadingMore"
+            type="Boolean" />
+
         <import type="android.view.View"/>
 
     </data>
@@ -17,6 +22,17 @@
         android:layout_height="match_parent"
         tools:context=".Activity.MainActivity">
 
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="@{isLoading ? View.VISIBLE: View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -57,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="PopularMovie" />
+                android:text="@string/popularmovie" />
 
             <ImageView
                 android:id="@+id/imageView3"

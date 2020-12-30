@@ -7,6 +7,7 @@
         <variable
             name="tvShow"
             type="com.example.movieshowmvvm.model.TvShowModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
