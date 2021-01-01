@@ -39,7 +39,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="@{isLoading ? View.VISIBLE: View.GONE,default=gone}"
+            android:visibility="@{isLoadingMore ? View.VISIBLE: View.GONE,default=gone}"
 
             app:layout_constraintEnd_toEndOf="@+id/tvShowRecycleview"
             app:layout_constraintStart_toStartOf="@+id/tvShowRecycleview"
@@ -50,6 +50,7 @@
             android:id="@+id/tvShowRecycleview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            tools:listitem="@layout/item_container_tv_show"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,6 +65,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="10dp"
+            android:background="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -73,10 +75,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
                 android:text="@string/popularmovie" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/watchlist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

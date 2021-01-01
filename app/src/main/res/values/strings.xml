@@ -2,4 +2,8 @@
     <string name="app_name">MovieShowMVVM</string>
     <string name="imageview">Imageview</string>
     <string name="popularmovie">popularmovie</string>
+    <string name="readmore">Read More</string>
+    <string name="readLess">Read Less</string>
+    <string name="website">Website</string>
+    <string name="episodes">Episodes</string>
 </resources>

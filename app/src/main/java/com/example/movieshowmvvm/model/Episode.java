@@ -6,11 +6,11 @@ import com.google.gson.annotations.SerializedName;
 public class Episode {
     @SerializedName("season")
     @Expose
-    private int season;
+    private String season;
 
     @SerializedName("episode")
     @Expose
-    private int episode;
+    private String episode;
 
     @SerializedName("name")
     @Expose
@@ -20,36 +20,19 @@ public class Episode {
     @Expose
     private String airDate;
 
-
-    public Integer getSeason() {
+    public String getSeason() {
         return season;
     }
 
-    public void setSeason(int season) {
-        this.season = season;
-    }
-
-    public Integer getEpisode() {
+    public String getEpisode() {
         return episode;
-    }
-
-    public void setEpisode(int episode) {
-        this.episode = episode;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getAirDate() {
         return airDate;
-    }
-
-    public void setAirDate(String airDate) {
-        this.airDate = airDate;
     }
 }
