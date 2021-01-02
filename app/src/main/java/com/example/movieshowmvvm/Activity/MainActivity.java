@@ -12,7 +12,6 @@ import android.view.View;
 
 import com.example.movieshowmvvm.Adapter.TvShowAdapter;
 import com.example.movieshowmvvm.Listner.TvShowListner;
-import com.example.movieshowmvvm.model.TvShowDetails;
 import com.example.movieshowmvvm.model.TvShowModel;
 import com.example.movieshowmvvm.R;
 import com.example.movieshowmvvm.ViewModels.MostPopularTvShowViewModel;
@@ -70,6 +69,15 @@ public class MainActivity extends AppCompatActivity implements TvShowListner {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),WatchlistActivity.class));
+            }
+        });
+
+
+        //searchBtn
+        activityMainBinding.serchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SearchActivity.class));
             }
         });
 
@@ -133,12 +141,6 @@ public class MainActivity extends AppCompatActivity implements TvShowListner {
         Intent intent = new Intent(getApplicationContext(), TvShowDetailsActivity.class);
 
         intent.putExtra("tvShow",tvShowModel);
-//        intent.putExtra("id", tvShowModel.getId());
-//        intent.putExtra("name", tvShowModel.getName());
-//        intent.putExtra("startdate", tvShowModel.getStartDate());
-//        intent.putExtra("country", tvShowModel.getCountry());
-//        intent.putExtra("network", tvShowModel.getNetwork());
-//        intent.putExtra("status", tvShowModel.getStatus());
 
         startActivity(intent);
     }
